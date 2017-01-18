@@ -5,16 +5,26 @@ import ProjectDescription from './ProjectDescription';
 class Project extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            title: "",
+            imageSrc: ""
+            }
     }
     componentDidMount() {
+        if (this.props.projectObject) {
+            this.setState({
+                title: this.props.projectObject.title,
+                imageSrc: this.props.projectObject.imageSrc
+            });
+        }
     }
     render() {
         if(this.props.projectKey % 2){
             return (
                 <div className="row">
-                    <ProjectImage imageSrc={this.props.imageSrc} />
+                    <ProjectImage imageSrc={this.state.imageSrc} />
                     <ProjectDescription>
-                        here is some text
+                        {this.state.title}
                     </ProjectDescription>
                 </div>
             )
@@ -23,9 +33,9 @@ class Project extends React.Component {
             return (
                 <div className="row">
                     <ProjectDescription>
-                        here is some text
+                        {this.state.title}
                     </ProjectDescription>
-                    <ProjectImage imageSrc={this.props.imageSrc} />
+                    <ProjectImage imageSrc={this.state.imageSrc} />
                 </div>
             )
         }

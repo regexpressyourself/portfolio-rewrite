@@ -17,10 +17,7 @@ class ProjectSection extends React.Component {
                     </div>
                 </div>
                 <Project key={1} projectKey={1} projectObject={projectList.pro1}></Project>
-                <Project key={0} projectKey={0}></Project>
-                {projectList.pro1.title}
-                <br/>
-                {projectList.pro1.pictureLink}
+                <Project key={0} projectKey={0} projectObject={projectList.pro2}></Project>
             </section>
         )
     }
@@ -29,7 +26,11 @@ class ProjectSection extends React.Component {
 const projectList = {
     pro1: {
         title: "hello",
-        pictureLink: "pictureLink"
+        imageSrc: "pictureLink"
+    },
+    pro2: {
+        title: "goodbye",
+        imageSrc: "goodbyepic"
     }
 }
 
