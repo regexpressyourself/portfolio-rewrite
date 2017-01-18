@@ -1,24 +1,34 @@
 import React from 'react';
+import ProjectImage from './ProjectImage';
+import ProjectDescription from './ProjectDescription';
 
 class Project extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            class1: "col-sm-" + (this.props.projectNumber%2*4+4),
-            class2: "col-sm-" + ((this.props.projectNumber+1)%2*4+4)
-        }
+    }
+    componentDidMount() {
     }
     render() {
-        return (
-            <div className="row">
-                <div className={this.state.class1}>
-                    <img alt="this was an img" src=""/>
+        if(this.props.projectKey % 2){
+            return (
+                <div className="row">
+                    <ProjectImage imageSrc={this.props.imageSrc} />
+                    <ProjectDescription>
+                        here is some text
+                    </ProjectDescription>
                 </div>
-                <div className={this.state.class2}>
-                    here is some text
+            )
+        }
+        else {
+            return (
+                <div className="row">
+                    <ProjectDescription>
+                        here is some text
+                    </ProjectDescription>
+                    <ProjectImage imageSrc={this.props.imageSrc} />
                 </div>
-            </div>
-        )
+            )
+        }
     }
 }
 
