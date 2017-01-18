@@ -1,9 +1,18 @@
 import React    from 'react';
+import {Center} from '../styles';
 
 class Footer extends React.Component {
     render() {
         return (
-            <h2>Footer</h2>
+            <footer style={Center}>
+                <div className="footer-below">
+                    <div className="row">
+                        <div className="col-lg-12">
+                            Copyright &copy; Sam Messina {new Date().getFullYear()}
+                        </div>
+                    </div>
+                </div>
+            </footer>
         )
     }
 }

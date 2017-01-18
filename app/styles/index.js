@@ -13,7 +13,7 @@ let styles = {
         position: 'absolute',
         bottom: '20px'
     },
-    ProjectHeader: {
+    Center: {
         textAlign: 'center',
     }
 }

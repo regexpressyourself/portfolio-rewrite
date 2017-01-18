@@ -7,7 +7,9 @@ class ProjectImage extends React.Component {
     render() {
         return (
             <div className="col-sm-4">
-                <img alt="Project Logo" src={this.props.imageSrc} />
+                <img className="img-responsive"
+                     alt="Project Logo"
+                     src={this.props.imageSrc} />
             </div>
         )
     }
