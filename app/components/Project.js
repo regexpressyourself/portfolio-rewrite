@@ -8,9 +8,10 @@ class Project extends React.Component {
         this.state = {
             title: "",
             imageSrc: ""
-            }
+        }
     }
     componentDidMount() {
+        console.log(typeof(this.props.projectObject));
         if (this.props.projectObject) {
             this.setState({
                 title: this.props.projectObject.title,

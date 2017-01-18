@@ -1,37 +1,59 @@
 import React    from 'react';
 import Project from './Project';
-import {ProjectHeader} from '../styles';
+import {Center} from '../styles';
 
 
 class ProjectSection extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            projectList: []
+        }
+    }
+
+    componentDidMount() {
+        this.setState({
+            projectList: this.createProjectList()
+            });
+    }
+
+    createProjectList() {
+        let projectComponentList = [];
+
+        let i = 0
+        for (let projectObject of projectList ) {
+            projectComponentList.push(
+                <Project key={i}
+                         projectKey={i++}
+                         projectObject={projectObject}></Project>
+            )
+        }
+        return projectComponentList;
     }
 
     render() {
         return (
             <section className="container">
                 <div className="row">
-                    <div className="col-xs-12" style={{textAlign: 'center'}}>
+                    <div className="col-xs-12" style={Center}>
                         <h2>Projects</h2>
+                        {this.state.projectList}
                     </div>
                 </div>
-                <Project key={1} projectKey={1} projectObject={projectList.pro1}></Project>
-                <Project key={0} projectKey={0} projectObject={projectList.pro2}></Project>
             </section>
         )
     }
 }
 
-const projectList = {
-    pro1: {
+const projectList = [
+    {
         title: "hello",
-        imageSrc: "pictureLink"
+        imageSrc: "http://smessina.com/img/ohlogo.png"
     },
-    pro2: {
+    {
         title: "goodbye",
-        imageSrc: "goodbyepic"
+        imageSrc: "http://smessina.com/img/ohlogo.png"
     }
-}
+];
 
 export default ProjectSection;
