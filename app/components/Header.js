@@ -1,6 +1,8 @@
 import React       from 'react';
+import { Link } from 'react-router';
 import { HeaderContainerStyle,
          ChevronStyle,
+         HeaderIcon,
          HeaderInnerStyle} from '../styles';
 
 class Header extends React.Component {
@@ -8,17 +10,25 @@ class Header extends React.Component {
         super(props);
     }
 
+    scrollToProjects() {
+        $(document).ready(function () {
+            $("html, body").animate({
+                scrollTop: $("#project-section").offset().top
+            }, 500);
+        });
+    }
+
     render() {
         return (
             <header style={HeaderContainerStyle}>
                 <div style={HeaderInnerStyle}>
-                    <i className="fa fa-code" />
+                    <i style={HeaderIcon} className="fa fa-code" />
                     <h1>Sam Messina</h1>
                     <p>Student | Developer</p>
                 </div>
-                <a href="#projects" style={ChevronStyle}>
+                <span onClick={this.scrollToProjects} className="scrolling-chevron">
                     <i className="fa fa-chevron-down" />
-                </a>
+                </span>
             </header>
 
 

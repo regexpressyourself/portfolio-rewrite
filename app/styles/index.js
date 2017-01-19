@@ -15,6 +15,10 @@ let styles = {
     },
     Center: {
         textAlign: 'center',
+    },
+    HeaderIcon: {
+        fontSize: '400%',
+        marginTop: '-5vh'
     }
 }
 

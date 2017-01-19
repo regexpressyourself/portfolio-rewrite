@@ -11,11 +11,12 @@ class Project extends React.Component {
         }
     }
     componentDidMount() {
-        console.log(typeof(this.props.projectObject));
         if (this.props.projectObject) {
             this.setState({
                 title: this.props.projectObject.title,
-                imageSrc: this.props.projectObject.imageSrc
+                imageSrc: this.props.projectObject.imageSrc,
+                description: this.props.projectObject.description,
+                backgroundStyle: this.props.projectObject.background
             });
         }
     }
@@ -23,9 +24,10 @@ class Project extends React.Component {
         if(this.props.projectKey % 2){
             return (
                 <div className="row">
-                    <ProjectImage imageSrc={this.state.imageSrc} />
-                    <ProjectDescription>
-                        {this.state.title}
+                    <ProjectImage imageSrc={this.state.imageSrc}
+                                  backgroundStyle={this.state.backgroundStyle} />
+                    <ProjectDescription title={this.state.title}
+                                        description={this.state.description}>
                     </ProjectDescription>
                 </div>
             )
@@ -33,8 +35,8 @@ class Project extends React.Component {
         else {
             return (
                 <div className="row">
-                    <ProjectDescription>
-                        {this.state.title}
+                    <ProjectDescription title={this.state.title}
+                                        description={this.state.description}>
                     </ProjectDescription>
                     <ProjectImage imageSrc={this.state.imageSrc} />
                 </div>

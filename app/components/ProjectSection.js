@@ -14,7 +14,7 @@ class ProjectSection extends React.Component {
     componentDidMount() {
         this.setState({
             projectList: this.createProjectList()
-            });
+        });
     }
 
     createProjectList() {
@@ -33,7 +33,7 @@ class ProjectSection extends React.Component {
 
     render() {
         return (
-            <section className="container">
+            <section id="project-section" className="container">
                 <div className="row">
                     <div className="col-xs-12" style={Center}>
                         <h2>Projects</h2>
@@ -47,13 +47,36 @@ class ProjectSection extends React.Component {
 
 const projectList = [
     {
-        title: "hello",
-        imageSrc: "http://smessina.com/img/ohlogo.png"
+        title: "OrderUp HookUp",
+        description: "OrderUp HookUp is an web app boasting an intuitive front end to Yelp's API",
+        imageSrc: "http://smessina.com/img/ohlogo.png",
+        background: {backgroundColor: '#E6FAED'}
     },
     {
-        title: "goodbye",
-        imageSrc: "http://smessina.com/img/ohlogo.png"
-    }
+        title: "Woody At Random",
+        description: "A Woody Allen recommendation website using a LAMP stack",
+        imageSrc: "http://smessina.com/img/woody.png",
+        background: {backgroundColor: 'black'}
+    },
+    {
+        title: "Turbo Pup Band Site",
+        description: "Website for the band Turbo Pup",
+        imageSrc: "http://smessina.com/img/turbo.png",
+        background: {backgroundImage: 'http://smessina.com/img/turbo.png'}
+    },
+    {
+        title: "Q Programming Language",
+        description: "A programming language to allow simple queue manipulation",
+        imageSrc: "http://smessina.com/img/qlanguage.png",
+        background: {backgroundColor: '#FFF176'}
+    },
+    {
+        title: "Scheduler.py",
+        description: "A command-line program to automate employee scheduling",
+        imageSrc: "http://smessina.com/img/scheduler.png",
+        background: {backgroundColor: '#282A36'}
+    },
+
 ];
 
 export default ProjectSection;
