@@ -1,13 +1,15 @@
 import React from 'react';
-import {ProjectRowItem} from '../styles';
+import {SmallProjectRowItem} from '../styles';
 
-class ProjectImage extends React.Component {
+class SmallProjectView extends React.Component {
     constructor(props) {
         super(props);
     }
     render() {
         return (
-            <div className="col-sm-6 hidden-xs" style={ProjectRowItem}>
+
+            <div className="col-xs-12 hidden-sm hidden-md hidden-lg" style={SmallProjectRowItem}>
+                <h3>{this.props.title}</h3>
                 <div style={this.props.backgroundStyle}
                      className="project-image-background">
                     <img className="img-responsive"
@@ -19,4 +21,4 @@ class ProjectImage extends React.Component {
     }
 }
 
-export default ProjectImage;
+export default SmallProjectView;

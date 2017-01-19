@@ -16,9 +16,21 @@ let styles = {
     Center: {
         textAlign: 'center',
     },
+    ProjectRowContainer: {
+        margin: '60px 20px'
+    },
+    ProjectRowItem: {
+        display: 'inline-block',
+        verticalAlign: 'middle',
+        float: 'none'
+    },
     HeaderIcon: {
         fontSize: '400%',
         marginTop: '-5vh'
+    },
+    StaticWidth: {
+        display: 'inline-block',
+        textAlign: 'left'
     }
 }
 

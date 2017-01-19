@@ -11,6 +11,7 @@ class Home extends React.Component {
             <div>
                 <Header />
                 <ProjectSection />
+                <br/><br/><br/>
                 <Contact />
                 <Footer />
             </div>
