@@ -7,8 +7,10 @@ class ProjectDescription extends React.Component {
     render() {
         return (
             <div className="col-sm-8">
+                <h3>{this.props.title}</h3>
                 <p>
-                    {this.props.children}
+                    {this.props.description}
+
                 </p>
             </div>
         )
