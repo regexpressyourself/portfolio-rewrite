@@ -4,19 +4,85 @@ body {
 }
 
 h1 {
-    font-size: 64px;
+    font-size: 72px;
 }
 
 h2 {
-    font-size: 36px;
+    font-size: 44px;
+    margin-bottom: 64px;
+}
+h2:after {
+    display: block;
+    position: absolute;
+    content:"____";
+    width: 100%; top: 30px;
+    text-align: center;
+    left: 0;
 }
 
 h3 {
-    font-size: 24px;
+    font-size: 32px;
+    font-weight: 600;
 }
+
+footer {
+    border-top: 1px solid black;
+    margin-top: 32px;
+    padding: 12px 0;
+}
+
+.clickable {
+    position: relative;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+    color: #000;
+    text-decoration: none;
+}
+.clickable:hover {
+    color: #000;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.clickable:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+}
+.clickable:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(.75);
+    transform: scaleX(.75);
+}
+
 
 .project-image-background {
     height: 100%;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    transition-duration: .5s;
+    transition-property: all;
+}
+
+.project-image-background:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.img-responsive {
+    max-width: 90%;
+    max-height: 90%;
+    margin: 0 auto;
 }
 
 .scrolling-chevron {
@@ -26,8 +92,13 @@ h3 {
     transition: all .2s;
     transition-timing-function: ease-in-out;
 }
+
 .scrolling-chevron:hover,
 .scrolling-chevron:active {
     cursor: pointer;
     font-size: 120%;
+}
+
+.fa {
+    padding: 0 10px;
 }
