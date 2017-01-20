@@ -1,4 +1,5 @@
 import React from 'react';
+import ProjectLinks from './ProjectLinks';
 import {SmallProjectRowItem} from '../styles';
 
 class SmallProjectView extends React.Component {
@@ -16,6 +17,7 @@ class SmallProjectView extends React.Component {
                          alt="Project Logo"
                          src={this.props.imageSrc} />
                 </div>
+                <ProjectLinks />
             </div>
         )
     }

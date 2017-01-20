@@ -3,21 +3,25 @@ let styles = {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        color: '#ffffff',
         textAlign: 'center',
-        height: '100vh'
+        height: '100vh',
+        /* backgroundImage: 'url("../public/pineblur.jpg")',*/
+        backgroundColor: "#e74c3c",
+        backgroundSize: 'cover'
     },
     HeaderInnerStyle: {
-        maxWidth: '50%'
     },
     ChevronStyle: {
         position: 'absolute',
-        bottom: '20px'
+        bottom: '20px',
+        animation: 'bounce 3s infinite'
     },
     Center: {
         textAlign: 'center',
     },
     ProjectRowContainer: {
-        margin: '60px 20px'
+        margin: '120px 0px'
     },
     ProjectRowItem: {
         display: 'inline-block',

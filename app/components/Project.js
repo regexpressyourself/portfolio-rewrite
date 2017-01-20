@@ -67,7 +67,7 @@ class Project extends React.Component {
     render() {
         if (this.props.imageOnRight) {
             return (
-                <div className="row" style={ProjectRowContainer}>
+                <div className="row project-row">
                     {this.state.descriptionComponent}
                     {this.state.imageComponent}
                     {this.state.smallViewComponent}
@@ -76,7 +76,7 @@ class Project extends React.Component {
         }
         else {
             return (
-                <div className="row" style={ProjectRowContainer}>
+                <div className="row project-row">
                     {this.state.imageComponent}
                     {this.state.descriptionComponent}
                     {this.state.smallViewComponent}
