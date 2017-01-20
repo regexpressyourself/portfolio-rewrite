@@ -1,4 +1,5 @@
 import React from 'react';
+import ProjectLinks from './ProjectLinks';
 import {ProjectRowItem,
         SmallProjectRowItem} from '../styles';
 
@@ -13,12 +14,7 @@ class ProjectDescription extends React.Component {
                 <p>
                     {this.props.description}
                 </p>
-                <span className="clickable">
-                    <i className="fa fa-link"></i> Link
-                </span>
-                <span className="clickable">
-                    <i className="fa fa-github"></i> Github
-                </span>
+                <ProjectLinks />
             </div>
         )
     }
