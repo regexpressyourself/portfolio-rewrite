@@ -1,6 +1,7 @@
 
 body {
     font-size: 200%;
+    color: #2F343B;
 }
 
 h1 {
@@ -10,6 +11,7 @@ h1 {
 h2 {
     font-size: 64px;
     margin-bottom: 64px;
+    color: #2C3E50;
 }
 h2:after {
     display: block;
@@ -21,6 +23,7 @@ h2:after {
 }
 
 h3 {
+    color: #2C3E50;
     font-size: 56px;
     font-weight: 600;
 }
@@ -34,24 +37,18 @@ header:before {
 
 footer {
     border-top: 1px solid black;
-    margin-top: 32px;
     padding: 12px 0;
-}
-
-#contact-section {
-    border-top: 1px solid black;
-    padding-top: 24px;
+    background-color: #ECF0F1;
 }
 
 .clickable {
     position: relative;
+    color: #E74C3C;
     -webkit-transition: all 0.5s ease-in-out 0s;
     transition: all 0.5s ease-in-out 0s;
-    color: #313131;
     text-decoration: none;
 }
 .clickable:hover {
-    color: #313131;
     transform: scale(1.05);
     cursor: pointer;
 }
@@ -62,7 +59,7 @@ footer {
     height: 2px;
     bottom: -5px;
     left: 0;
-    background-color: #000;
+    background-color: #3498DB;
     visibility: hidden;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
@@ -104,6 +101,12 @@ a.clickable:visited {
     margin: 0 20px;
     font-size: 110%;
 }
+.project-link.right {
+    float: left;
+}
+.project-link.left {
+    float: right;
+}
 
 .project-link > .fa-github {
 }
@@ -111,7 +114,7 @@ a.clickable:visited {
 .project-link > .fa-link{
 }
 
-.project-link > .fa {
+.fa {
     font-size: 140%;
 }
 
@@ -180,6 +183,22 @@ a.clickable:visited {
     margin: 120px 0;
 }
 
+#contact-section {
+    border-top: 1px solid black;
+    padding-top: 24px;
+    background-color: #36384c;
+    color: #ECF0F1;
+    padding-bottom: 32px;
+}
+#contact-section  .clickable,
+#contact-section  h2
+{
+    color: #ECF0F1;
+}
+
+#project-section {
+    background-color: #ECF0F1;
+}
 
 @media only screen and (max-width: 768px) {
     body {
@@ -199,5 +218,18 @@ a.clickable:visited {
     }
     .project-link {
         font-size: 120%;
+    }
+    .project-link.right {
+        text-align: center;
+    }
+    .project-link.left,
+    .project-link.right {
+        float: none;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+        .project-image-background {
+        max-width: 700px;
     }
 }
