@@ -35,12 +35,14 @@ class ProjectSection extends React.Component {
 
     render() {
         return (
-            <section id="project-section" className="container-fluid">
-                <div className="row">
-                    <div className="col-xs-12" style={Center}>
-                        <h2>Projects</h2>
-                        <div>
-                        {this.state.projectList}
+            <section id="project-section">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-xs-12" style={Center}>
+                            <h2>Projects</h2>
+                            <div>
+                                {this.state.projectList}
+                            </div>
                         </div>
                     </div>
                 </div>
