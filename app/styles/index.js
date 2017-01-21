@@ -6,7 +6,6 @@ let styles = {
         color: '#f3ebda',
         textAlign: 'center',
         height: '100vh',
-        /* backgroundImage: 'url("../public/pineblur.jpg")',*/
         backgroundColor: "#703030",
         backgroundSize: 'cover'
     },

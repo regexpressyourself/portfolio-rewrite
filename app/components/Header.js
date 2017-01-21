@@ -17,6 +17,13 @@ class Header extends React.Component {
             }, 500);
         });
     }
+    scrollToContact() {
+        $(document).ready(function () {
+            $("html, body").animate({
+                scrollTop: $("#contact-section").offset().top
+            }, 500);
+        });
+    }
 
     render() {
         return (
@@ -25,6 +32,7 @@ class Header extends React.Component {
                     <i style={HeaderIcon} className="fa fa-code" />
                     <h1>Sam Messina</h1>
                     <p>Student | Developer</p>
+                    <br/>
                 </div>
                 <span onClick={this.scrollToProjects} className="scrolling-chevron">
                     <i className="fa fa-chevron-down" />

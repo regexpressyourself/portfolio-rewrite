@@ -22,6 +22,7 @@ class Project extends React.Component {
                 backgroundStyle: this.props.projectObject.background,
                 projectLink:     this.props.projectObject.projectLink,
                 githubLink:      this.props.projectObject.githubLink,
+                techList:        this.props.projectObject.techList,
                 imageOnRight:    this.props.projectObject.imageOnRight
             }, this.createComponents);
         }
@@ -36,31 +37,49 @@ class Project extends React.Component {
     }
 
     createDescription() {
+        let techImageList = this.createTechImageList();
         return (
             <ProjectDescription title={this.state.title}
                                 description={this.state.description}
+                                techList={techImageList}
                                 githubLink={this.state.githubLink}
                                 projectLink={this.state.projectLink} />
         )
     }
 
     createImage() {
+        let techImageList = this.createTechImageList();
         return (
             <ProjectImage
                 imageSrc={this.state.imageSrc}
+                techList={techImageList}
                 githubLink={this.state.githubLink}
                 projectLink={this.state.projectLink}
                 backgroundStyle={this.state.backgroundStyle} />
         )
     }
 
+    createTechImageList() {
+        return this.state.techList.map(function(techItem) {
+            let techImageSource = "./public/" + techItem + ".svg";
+            return <img alt="Tech logo"
+                        key={techImageSource}
+                        src={techImageSource}
+                        className="tech-logo-image" />
+        });
+    }
+
     createSmallView() {
+        let techImageList = this.createTechImageList();
         return (
-            <SmallProjectView imageSrc={this.state.imageSrc}
-                              githubLink={this.state.githubLink}
-                              projectLink={this.state.projectLink}
-                              title={this.state.title}
-                              description={this.state.description}               backgroundStyle={this.state.backgroundStyle} />
+            <SmallProjectView
+                imageSrc={this.state.imageSrc}
+                githubLink={this.state.githubLink}
+                techList={techImageList}
+                projectLink={this.state.projectLink}
+                title={this.state.title}
+                description={this.state.description}
+                backgroundStyle={this.state.backgroundStyle} />
         )
     }
 
