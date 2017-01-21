@@ -11,7 +11,7 @@ h1 {
 h2 {
     font-size: 64px;
     margin-bottom: 64px;
-    color: #2C3E50;
+    color: #2F343B;
 }
 h2:after {
     display: block;
@@ -23,7 +23,7 @@ h2:after {
 }
 
 h3 {
-    color: #2C3E50;
+    color: #2F343B;
     font-size: 56px;
     font-weight: 600;
 }
@@ -38,12 +38,13 @@ header:before {
 footer {
     border-top: 1px solid black;
     padding: 12px 0;
-    background-color: #ECF0F1;
+    background-color: #2F343B;
+    color: #F9F5EC;
 }
 
 .clickable {
     position: relative;
-    color: #E74C3C;
+    color: #703030;
     -webkit-transition: all 0.5s ease-in-out 0s;
     transition: all 0.5s ease-in-out 0s;
     text-decoration: none;
@@ -51,6 +52,7 @@ footer {
 .clickable:hover {
     transform: scale(1.05);
     cursor: pointer;
+    color: #C77966;
 }
 .clickable:before {
     content: "";
@@ -59,7 +61,7 @@ footer {
     height: 2px;
     bottom: -5px;
     left: 0;
-    background-color: #3498DB;
+    background-color: #C77966;
     visibility: hidden;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
@@ -186,18 +188,18 @@ a.clickable:visited {
 #contact-section {
     border-top: 1px solid black;
     padding-top: 24px;
-    background-color: #36384c;
-    color: #ECF0F1;
+    background-color: #703030;
+    color: #F9F5EC;
     padding-bottom: 32px;
 }
 #contact-section  .clickable,
 #contact-section  h2
 {
-    color: #ECF0F1;
+    color: #F9F5EC;
 }
 
 #project-section {
-    background-color: #ECF0F1;
+    background-color: #F9F5EC;
 }
 
 @media only screen and (max-width: 768px) {
@@ -208,7 +210,7 @@ a.clickable:visited {
         font-size: 72px;
     }
     h2 {
-        font-size: 56px;
+        font-size: 52px;
     }
     h3 {
         font-size: 40px;
