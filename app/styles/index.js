@@ -3,11 +3,10 @@ let styles = {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        color: '#ECF0F1',
+        color: '#f3ebda',
         textAlign: 'center',
         height: '100vh',
-        /* backgroundImage: 'url("../public/pineblur.jpg")',*/
-        backgroundColor: "#2C3E50",
+        backgroundColor: "#703030",
         backgroundSize: 'cover'
     },
     HeaderInnerStyle: {
